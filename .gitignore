@@ -28,3 +28,5 @@ index.php
 *.sublime-workspace
 nbproject
 thumbs.db
+
+/node_modules
