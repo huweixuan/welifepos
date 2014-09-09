@@ -1,0 +1,22 @@
+{
+  "name": "welifepos",
+  "version": "0.1.0",
+  "description": "微生活pos静态页面",
+  "repository": "git@github.com:huweixuan/welifepos.git",
+  "keywords": [
+    "welifepos"
+  ],
+  "author": {
+    "name": "huweixuan",
+    "email": "weixuan.hu@dianping.com"
+  },
+  "bugs": {
+    "url": "https://github.com/huweixuan/welifepos/issues"
+  },
+  "homepage": "https://github.com/huweixuan/welifepos",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-less": "^1.3.5",
+    "gulp-minify-css": "^0.3.8"
+  }
+}
