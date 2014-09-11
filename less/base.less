@@ -195,11 +195,64 @@ body{
 
 //具体页面主体内容
 #page_main{
-	min-width: 968px;
+	width: 968px;
+	margin: 0 auto;
+
+	.panel {
+		border: 1px solid #cacad8;
+		border-radius: 0;
+
+		.panel-header {
+			zoom: 1;
+			overflow: auto;
+			a {
+				width: 322px;
+				height: 60px;
+				display: block;
+				float: left;
+				line-height: 60px;
+				font-size: 24px;
+				color: #2d3f4f;
+				background-color: #f8fafb;
+				text-align: center;
+				text-decoration: none;
+				border-bottom: 1px solid #dde9ed;
+				border-right: 1px solid #dde9ed;
+				cursor: pointer;
+				&:last-child {
+					border-right: 0;
+				}
+				&:hover {
+					color: #0083fc;
+				}
+				&.active {
+					color: #0083fc;
+				}
+			}
+		}
+		.panel-body {
+			padding: 40px 30px;
+		}
+	}
 }
 
 //页脚
 #page_bottom{
 	text-align: center;
 	color: #999;
+}
+
+.user-info{
+	font-size: 16px;
+	margin-bottom: 20px;
+	label {
+		color: #2d3f4f;
+	}
+	span {
+		color: #00b43f;
+		margin-right: 10px;
+	}
+	.hint {
+		font-size: 12px;
+	}
 }

@@ -1,0 +1,36 @@
+.welife-pagination {
+	float: right;
+	& > li {
+		a, span {
+			margin-left: 2px;
+		}
+		&:first-child > a, &:first-child > span {
+			margin-left: 0;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+		&:last-child > a, &:last-child > span {
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+		&.active > a, &.active > span, &.active > a:hover, &.active > span:hover {
+			color: #2d3f4f;
+			cursor: default;
+			background-color: #fff;
+			border-color: #ddd;
+		}
+		.txt {
+			display: inline;
+			line-height: 34px;
+			padding: 0 8px;
+		}
+		.input {
+			display: inline;
+			padding: 0;
+			input {
+				display: inline;
+				width: 40px;
+			}
+		}
+	}
+}

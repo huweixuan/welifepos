@@ -1,0 +1,67 @@
+.serial-tab {
+	border-bottom: 1px solid #dde9ed;
+	font-size: 18px;
+	overflow: auto;
+	zoom: 1;
+	a {
+		padding-bottom: 10px;
+		display: block;
+		width: 120px;
+		float: left;
+		cursor: pointer;
+		text-decoration: none;
+		color: #2d3f4f;
+		text-align: center;
+		&:hover {
+			color: #0083fc;
+		}
+		&.active {
+			color: #0083fc;
+			border-bottom: 2px solid #0083fc;
+		}
+	}
+}
+
+.serial-query {
+	padding:30px 0; 
+}
+
+.serial-result {
+	margin-top: 30px;
+	padding: 20px 0;
+	color: #999;
+	font-size: 16px;
+	em {
+		font-style: normal;
+		color: #ff8400;
+		padding: 0 5px;
+		font-size: 20px;
+	}
+}
+.serial-table {
+	width: 1700px;
+}
+
+.serial-pop-title {
+	color: #999;
+	font-size: 16px;
+	padding: 5px 0 20px;
+}
+
+.serial-pop-warn {
+	color: #fc1425;
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+}
+.serial-cancel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -176px;
+	margin-left: -101px;
+	background: url(img/cancel.png);
+	width: 352px;
+	height: 202px;
+	z-index: 2000;
+}

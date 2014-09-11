@@ -1,0 +1,102 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>修改密码</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<header class="navbar navbar-static-top" id="page_top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">大众微生活 POS系统</a>
+    </div>
+    <nav class="collapse navbar-collapse">
+    	<div class="help">
+				<a href="#">使用技巧</a>
+		  </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+					<a class="icon icon_index" href="#">首页</a>
+				</li>
+				<li>
+					<a class="icon icon_settings" href="#">设置</a>
+				</li>
+				<li>
+					<a class="icon icon_help" href="#">帮助</a>
+				</li>
+		  </ul>
+		  <div class="welcome">
+				欢迎您&nbsp;&nbsp;王小韩&nbsp;&nbsp;<a href="#">修改密码</a>&nbsp;&nbsp;<a href="#">退出</a>
+		  </div>
+    </nav>
+  </div>
+</header>
+
+<div class="container" id="page_container">
+	<div class="row" id="page_main">
+		<div class="user-info">
+			<label>卡号：</label><span>1453221</span>
+			<label>手机号：</label><span>186 1345 6688</span>
+			<label>姓名：</label><span>张筱雨</span><label class="hint">女士</label>
+		</div>
+		<div class="panel">
+			<div class="panel-header">
+				<a>消费</a>
+				<a class="active">充值</a>
+				<a>交易流水</a>
+			</div>
+			<div class="panel-body">
+				<form class="form-horizontal welife-form charge-form" role="form">
+	  			<div class="form-group form-group-lg">
+						<label for="present" class="control-label col-sm-3">选择储值奖励规则</label>
+						<div class="col-sm-9">
+							<div class="tag active">充<em>100</em>送<em>10</em></div>
+							<div class="tag">充<em>200</em>送<em>30</em></div>
+							<div class="tag">充<em>500</em>送<em>100</em></div>
+							<div class="tag">充<em>1000</em>送<em>300</em></div>
+							<a class="more">其他规则</a>
+							<div class="tag more-tag">
+								<span>充</span>
+								<div class="input-group">
+      						<input class="form-control" type="text">
+      						<div class="input-group-btn">
+      							<button type="button" class="btn welife-query-btn btn-lg">确定</button>
+      						</div>
+    						</div>
+    						<span>送<em>200</em></span>
+    					</div>
+						</div>
+					</div>
+					<div class="form-group form-group-lg">
+						<label for="operator" class="control-label col-sm-3">操作员</label>
+						<div class="radio col-sm-9">
+							<label class="radio-inline">
+						    <input type="radio" name="payType" id="payType" value="1">现金
+						  </label>
+						  <label class="radio-inline">
+						    <input type="radio" name="payType" id="payType" value="2">银行卡
+						  </label>
+						</div>
+					</div>
+					<div class="form-group form-group-lg btn-wrapper">
+						<button type="button" class="btn welife-btn btn-lg">确&nbsp;定</button>
+						<button type="button" class="btn welife-hint-btn btn-lg">重&nbsp;置</button>
+					</div>				
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.welife-table {
+	color: #2d3f4f;
+	& > thead > tr > th {
+		vertical-align: middle;
+		background-color: #f8fafb;
+		border-bottom: 1px solid #ddd;
+		padding: 10px 20px;
+	}
+	& > thead:first-child > tr:first-child > th {
+		border-top: 1px solid #ddd;
+	}
+	& > tbody {
+		border-bottom: 1px solid #ddd;
+		& > tr > td {
+			padding: 10px 20px;
+			height: 70px;
+			vertical-align: middle;
+		}
+		& > tr:nth-child(odd) > td {
+			background-color: #fff;
+		}
+		& > tr:nth-child(even) > td {
+			background-color: #fcfcfd;
+		}
+	}
+	.hint {
+		font-size: 12px;
+		color: #999;
+	}
+	.error {
+		color: #fc1425;
+	}
+	.opt {
+		color: #0083fc;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+.welife-table-wrapper {
+	width: 100%;
+	overflow: scroll;
+}

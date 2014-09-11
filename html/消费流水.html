@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>充值流水</title>
+<title>消费流水</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -57,8 +57,8 @@
 			</div>
 			<div class="panel-body">
 				<div class="serial-tab">
-					<a>消费流水</a>
-					<a class="active">充值流水</a>
+					<a class="active">消费流水</a>
+					<a>充值流水</a>
 				</div>
 				<div class="serial-query">
 					<form class="form-horizontal welife-form" role="form">
@@ -89,17 +89,24 @@
 					<div class="serial-result">
 						查询结果<em>15</em>条&nbsp;&nbsp;充值金额共<em>5800</em>元&nbsp;&nbsp;实收金额共<em>4200</em>元&nbsp;&nbsp;奖励金额共<em>1600</em>元
 					</div>
-					<table class="table table-striped welife-table">
+					<div class="welife-table-wrapper">
+					<table class="table table-striped welife-table serial-table">
 					  <thead>
 					  	<tr>
 					  		<th>流水号</th>
 					  		<th>门店</th>
 					  		<th>卡号/手机号</th>
 					  		<th style="text-align: center">交易时间</th>
-					  		<th style="text-align: center">充值金额（元）</th>
-					  		<th style="text-align: center">奖励金额（元）</th>
-					  		<th style="text-align: center">支付方式</th>
+					  		<th style="text-align: center">消费总金额<br/>（元）</th>
+					  		<th style="text-align: center">实收金额<br/>（元）</th>
+					  		<th style="text-align: center">使用储值<br/>（元）</th>
+					  		<th>使用代金券</th>
+					  		<th>使用礼品卷</th>
+					  		<th>奖励代金券</th>
+					  		<th>奖励礼品卷</th>
+					  		<th style="text-align: center">交易类型</th>
 					  		<th style="text-align: center">操作员</th>
+					  		<th style="text-align: center">操作</th>
 					  	</tr>
 					  </thead>
 					  <tbody>
@@ -108,43 +115,44 @@
 					  		<td>上帝店</td>
 					  		<td>13611111111</td>
 					  		<td style="text-align: center">2014-07-01<br/>12:31</td>
+					  		<td style="text-align: center">2000</td>
 					  		<td style="text-align: center">500</td>
 					  		<td style="text-align: center">100</td>
-					  		<td style="text-align: center">现金</td>
+					  		<td>30元代金券1张</td>
+					  		<td>可口可乐券1张 抵扣0元</td>
+					  		<td>-</td>
+					  		<td>可口可乐券1张</td>
+					  		<td style="text-align: center">
+					  			<span class="error">撤销消费</span>
+					  			<br/>
+					  			<span class="hint">原流水号1234567</span>
+					  		</td>
 					  		<td style="text-align: center">哈哈哈</td>
+					  		<td style="text-align: center"><span class="hint">已撤销</span></td>
 					  	</tr>
 					  	<tr>
 					  		<td>1234567890</td>
 					  		<td>上帝店</td>
 					  		<td>13611111111</td>
 					  		<td style="text-align: center">2014-07-01<br/>12:31</td>
+					  		<td style="text-align: center">2000</td>
 					  		<td style="text-align: center">500</td>
 					  		<td style="text-align: center">100</td>
-					  		<td style="text-align: center">现金</td>
+					  		<td>30元代金券1张</td>
+					  		<td>可口可乐券1张 抵扣0元</td>
+					  		<td>-</td>
+					  		<td>可口可乐券1张</td>
+					  		<td style="text-align: center">
+					  			<span class="error">撤销消费</span>
+					  			<br/>
+					  			<span class="hint">原流水号1234567</span>
+					  		</td>
 					  		<td style="text-align: center">哈哈哈</td>
-					  	</tr>
-					  	<tr>
-					  		<td>1234567890</td>
-					  		<td>上帝店</td>
-					  		<td>13611111111</td>
-					  		<td style="text-align: center">2014-07-01<br/>12:31</td>
-					  		<td style="text-align: center">500</td>
-					  		<td style="text-align: center">100</td>
-					  		<td style="text-align: center">现金</td>
-					  		<td style="text-align: center">哈哈哈</td>
-					  	</tr>
-					  	<tr>
-					  		<td>1234567890</td>
-					  		<td>上帝店</td>
-					  		<td>13611111111</td>
-					  		<td style="text-align: center">2014-07-01<br/>12:31</td>
-					  		<td style="text-align: center">500</td>
-					  		<td style="text-align: center">100</td>
-					  		<td style="text-align: center">现金</td>
-					  		<td style="text-align: center">哈哈哈</td>
+					  		<td style="text-align: center"><a class="opt">撤销消费</a></td>
 					  	</tr>
 					  </tbody>
 					</table>
+					</div>
 					<ul class="pagination welife-pagination">
 					  <li><a href="#">上一页</a></li>
 					  <li class="active"><a href="#">1</a></li>
@@ -161,6 +169,52 @@
 		</div>
 	</div>
 </div>
-
+<div class="modal welife-modal" style="display: block">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">撤销确认</h4>
+      </div>
+      <div class="modal-body">
+        <div class="serial-pop-title">原交易信息</div>
+        <table class="table table-striped welife-pop-table">
+        	<thead>
+        		<tr>
+	        		<th colspan="2" width="50%">交易流水号<em>1234567</em></th>
+	        		<th colspan="2" width="50%">卡号/手机号<em>13800138000</em></th>
+	        	</tr>
+        	</thead>
+        	<tbody>
+        		<tr>
+        			<td style="text-align: right" width="25%">消费总额</td><td colspan="3"><em>360</em>元</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: right" width="25%">实收金额</td><td colspan="3"><em class="error">360</em>元</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: right" width="25%">使用储值</td><td colspan="3">360元</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: right" width="25%">使用代金券</td><td colspan="3">50元代金券 x1</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: right" width="25%">使用礼品券</td><td colspan="3">可口可乐一听 x1&nbsp;&nbsp;精品烤鸭半价 x1</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: right" width="25%">奖励代金券</td><td colspan="3">20元代金券 x1</td>
+        		</tr>
+        	</tbody>
+        </table>
+        <div class="serial-pop-warn">提示：该交易奖励的优惠券，系统不返还</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn welife-btn" data-dismiss="modal">确&nbsp;认</button>
+        <button type="button" class="btn welife-hint-btn">取&nbsp;消</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="serial-cancel">
+</div>
 </body>
 </html>

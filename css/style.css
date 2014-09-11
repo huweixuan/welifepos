@@ -69,11 +69,61 @@ body {
   padding-right: 0;
 }
 #page_main {
-  min-width: 968px;
+  width: 968px;
+  margin: 0 auto;
+}
+#page_main .panel {
+  border: 1px solid #cacad8;
+  border-radius: 0;
+}
+#page_main .panel .panel-header {
+  zoom: 1;
+  overflow: auto;
+}
+#page_main .panel .panel-header a {
+  width: 322px;
+  height: 60px;
+  display: block;
+  float: left;
+  line-height: 60px;
+  font-size: 24px;
+  color: #2d3f4f;
+  background-color: #f8fafb;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid #dde9ed;
+  border-right: 1px solid #dde9ed;
+  cursor: pointer;
+}
+#page_main .panel .panel-header a:last-child {
+  border-right: 0;
+}
+#page_main .panel .panel-header a:hover {
+  color: #0083fc;
+}
+#page_main .panel .panel-header a.active {
+  color: #0083fc;
+}
+#page_main .panel .panel-body {
+  padding: 40px 30px;
 }
 #page_bottom {
   text-align: center;
   color: #999;
+}
+.user-info {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.user-info label {
+  color: #2d3f4f;
+}
+.user-info span {
+  color: #00b43f;
+  margin-right: 10px;
+}
+.user-info .hint {
+  font-size: 12px;
 }
 .welife-form label {
   font-size: 16px;
@@ -97,15 +147,26 @@ body {
 .welife-form .btn-wrap {
   margin-top: 30px;
 }
-.welife-form .welife-btn {
+.welife-btn {
   background-color: #5f6a7f;
   border-color: #314050;
   color: #fff;
+  border-radius: 4px;
+  vertical-align: top;
 }
-.welife-form .welife-hint-btn {
+.welife-hint-btn {
   background-color: #eef1f3;
   border-color: #ced2db;
   color: #646472;
+  border-radius: 4px;
+  vertical-align: top;
+}
+.welife-query-btn {
+  background-color: #f3f5f6;
+  border-color: #c8d1d5;
+  color: #0083fc;
+  border-radius: 4px;
+  vertical-align: top;
 }
 .login-form {
   width: 600px;
@@ -121,4 +182,285 @@ body {
   width: 850px;
   padding-left: 200px;
   margin: 70px auto;
+}
+.serial-tab {
+  border-bottom: 1px solid #dde9ed;
+  font-size: 18px;
+  overflow: auto;
+  zoom: 1;
+}
+.serial-tab a {
+  padding-bottom: 10px;
+  display: block;
+  width: 120px;
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+  color: #2d3f4f;
+  text-align: center;
+}
+.serial-tab a:hover {
+  color: #0083fc;
+}
+.serial-tab a.active {
+  color: #0083fc;
+  border-bottom: 2px solid #0083fc;
+}
+.serial-query {
+  padding: 30px 0;
+}
+.serial-result {
+  margin-top: 30px;
+  padding: 20px 0;
+  color: #999;
+  font-size: 16px;
+}
+.serial-result em {
+  font-style: normal;
+  color: #ff8400;
+  padding: 0 5px;
+  font-size: 20px;
+}
+.serial-table {
+  width: 1700px;
+}
+.serial-pop-title {
+  color: #999;
+  font-size: 16px;
+  padding: 5px 0 20px;
+}
+.serial-pop-warn {
+  color: #fc1425;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+.serial-cancel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -176px;
+  margin-left: -101px;
+  background: url(img/cancel.png);
+  width: 352px;
+  height: 202px;
+  z-index: 2000;
+}
+.welife-table {
+  color: #2d3f4f;
+}
+.welife-table > thead > tr > th {
+  vertical-align: middle;
+  background-color: #f8fafb;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+.welife-table > thead:first-child > tr:first-child > th {
+  border-top: 1px solid #ddd;
+}
+.welife-table > tbody {
+  border-bottom: 1px solid #ddd;
+}
+.welife-table > tbody > tr > td {
+  padding: 10px 20px;
+  height: 70px;
+  vertical-align: middle;
+}
+.welife-table > tbody > tr:nth-child(odd) > td {
+  background-color: #fff;
+}
+.welife-table > tbody > tr:nth-child(even) > td {
+  background-color: #fcfcfd;
+}
+.welife-table .hint {
+  font-size: 12px;
+  color: #999;
+}
+.welife-table .error {
+  color: #fc1425;
+}
+.welife-table .opt {
+  color: #0083fc;
+  cursor: pointer;
+  text-decoration: none;
+}
+.welife-table-wrapper {
+  width: 100%;
+  overflow: scroll;
+}
+.welife-pagination {
+  float: right;
+}
+.welife-pagination > li a,
+.welife-pagination > li span {
+  margin-left: 2px;
+}
+.welife-pagination > li:first-child > a,
+.welife-pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.welife-pagination > li:last-child > a,
+.welife-pagination > li:last-child > span {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.welife-pagination > li.active > a,
+.welife-pagination > li.active > span,
+.welife-pagination > li.active > a:hover,
+.welife-pagination > li.active > span:hover {
+  color: #2d3f4f;
+  cursor: default;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.welife-pagination > li .txt {
+  display: inline;
+  line-height: 34px;
+  padding: 0 8px;
+}
+.welife-pagination > li .input {
+  display: inline;
+  padding: 0;
+}
+.welife-pagination > li .input input {
+  display: inline;
+  width: 40px;
+}
+.welife-modal .modal-content {
+  border-radius: 0;
+}
+.welife-modal .modal-content .modal-header {
+  background-color: #f8fafb;
+}
+.welife-modal .modal-content .modal-header .modal-title {
+  color: #999;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: #f8fafb;
+}
+.welife-modal .modal-content .modal-body {
+  padding: 25px;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table {
+  color: #2d3f4f;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table > thead > tr > th {
+  vertical-align: middle;
+  background-color: #29b424;
+  color: #fff;
+  border: 0;
+  padding: 15px 20px;
+  font-weight: normal;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table > thead > tr > th em {
+  font-size: 18px;
+  font-style: normal;
+  padding-left: 10px;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table > tbody {
+  border-bottom: 1px solid #ddd;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table > tbody > tr > td {
+  padding: 10px 20px;
+  height: 50px;
+  vertical-align: middle;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table > tbody > tr:nth-child(odd) > td {
+  background-color: #fff;
+}
+.welife-modal .modal-content .modal-body .welife-pop-table > tbody > tr:nth-child(even) > td {
+  background-color: #f8fafb;
+}
+.welife-modal .modal-content .modal-footer {
+  border-top: 0;
+  text-align: center;
+}
+.welife-modal .modal-content .modal-footer .btn {
+  width: 120px;
+}
+.charge-form {
+  color: #2d3f4f;
+}
+.charge-form .form-group {
+  padding: 30px 0;
+  border-bottom: 1px dashed #e6eff2;
+  margin-bottom: 0;
+}
+.charge-form .form-group .control-label {
+  padding-top: 0;
+}
+.charge-form .form-group .radio {
+  padding-top: 0;
+}
+.charge-form .form-group .radio .radio-inline {
+  color: #666;
+  padding-top: 0;
+}
+.charge-form .form-group:last-child {
+  border-bottom: 0;
+}
+.charge-form .tag {
+  height: 50px;
+  float: left;
+  min-width: 240px;
+  _width: 240px;
+  background-color: #e2f6fb;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  line-height: 50px;
+  padding: 0 20px;
+  margin-right: 60px;
+  margin-bottom: 25px;
+}
+.charge-form .tag em {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  padding: 0 5px;
+}
+.charge-form .tag.active {
+  color: #fff;
+  background-color: #28b424;
+  border-color: #009a1e;
+}
+.charge-form .more {
+  display: block;
+  float: left;
+  text-decoration: underline;
+  margin-bottom: 25px;
+  cursor: pointer;
+  color: #0083fc;
+  clear: both;
+}
+.charge-form .more:hover {
+  color: #0083fc;
+}
+.charge-form .more-tag {
+  clear: both;
+}
+.charge-form .more-tag span {
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+.charge-form .more-tag .input-group {
+  width: 185px;
+  float: left;
+  padding-top: 1px;
+  margin-right: 20px;
+}
+.charge-form .more-tag .input-group input {
+  width: 120px;
+}
+.charge-form .more-tag .input-group .input-group-btn .btn {
+  height: 46px;
+}
+.charge-form .btn-wrapper {
+  text-align: center;
+}
+.charge-form .btn-wrapper .btn {
+  margin: 0 10px;
+  width: 120px;
 }
